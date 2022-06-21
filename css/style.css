@@ -30,8 +30,8 @@ header {
 
 .container_custom{
     padding-top: 10vh;
-    background-color: rgb(181, 127, 232);
-    min-height: 100vh;
+    background-color: rgba(169, 154, 162, 0.8); 
+    min-height: 125vh;
 }
 
 .row-card{
@@ -51,7 +51,7 @@ header {
 }
 
 footer h6{
-    padding: 1.5vh 0vh 0.5vh 0vh;
+    padding: 1vh 0vh 0.5vh 0vh;
 }
 
 .footer-row{
@@ -60,6 +60,12 @@ footer h6{
     padding: 0px;
 }
 
+.checkbox{
+    transform: scale(3.5);
+}
+
 .footer-row a{
     padding: 0px;
 }
+
+/* background-color: rgba(169, 154, 162, 0.8);  */

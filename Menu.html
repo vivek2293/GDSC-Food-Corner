@@ -29,51 +29,177 @@
         </div>
     </nav>
     <div class="container container_custom">
-        <div class="foodItems row" id="food1">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames">Burger</h1>
-            <h2 class="prices">&#8377 20</h2>
-            <!-- <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div> -->
-              
+        <div class="foodItems row my-3 justify-content-around" id="food2">
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?biryani,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Biryani</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">200</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid0" onclick="orderPrice()">
+                </div>
+            </div>
+            
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?butterchicken,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>ButterChicken</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">240</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid1" onclick="orderPrice()">
+                </div>
+            </div>
+
         </div>
-        <div class="foodItems row" id="food2">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames"></h1>
-            <h2 class="prices"></h2>
+
+        <div class="foodItems row my-3 justify-content-around" id="food2">
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?paneer,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>ShahiPaneer</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">150</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid2" onclick="orderPrice()">
+                </div>
+            </div>
+
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?naan,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Naan</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">30</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid3" onclick="orderPrice()">
+                </div>
+            </div>
+
         </div>
-        <div class="foodItems row" id="food3">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames"></h1>
-            <h2 class="prices"></h2>
+
+        <div class="foodItems row my-3 justify-content-around" id="food2">
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?chapati,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Roti</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">350</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid4" onclick="orderPrice()">
+                </div>
+            </div>
+
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?dal,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Dal</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">100</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid5" onclick="orderPrice()">
+                </div>
+            </div>
         </div>
-        <div class="foodItems row" id="food4">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames"></h1>
-            <h2 class="prices"></h2>
+        <div class="foodItems row my-3 justify-content-around" id="food2">
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?rice,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Rice</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">55</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid6" onclick="orderPrice()">
+                </div>
+            </div>
+
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?restaurant,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>CholeBhature</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">120</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid7" onclick="orderPrice()">
+                </div>
+            </div>
         </div>
-        <div class="foodItems row" id="food5">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames"></h1>
-            <h2 class="prices"></h2>
+        <div class="foodItems row my-3 justify-content-around" id="food2">
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded" src="https://source.unsplash.com/150x150/?pizza,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Pizza</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">150</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid8" onclick="orderPrice()">
+                </div>
+            </div>
+
+            <div class="row col-12 col-lg-6 my-3 justify-content-around">
+                <div class="col-4"><img class="img-fluid rounded rounded" src="https://source.unsplash.com/150x150/?burger,food" class="foodImages" alt=""></div>
+                <div class="col-4">
+                    <div class="row">
+                        <h1>Burger</h1>
+                        <br>
+                    </div>
+                    <div class="row align-self-center">
+                        <h2><span class="badge bg-secondary"><span class="fa fa-rupee">190</span></span></h2>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-self-center">
+                    <input class="checkbox" type="checkbox" id="cbid9" onclick="orderPrice()">
+                </div>
+            </div>
         </div>
-        <div class="foodItems row" id="food6">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames"></h1>
-            <h2 class="prices"></h2>
-        </div>
-        <div class="foodItems row" id="food7">
-            <div class="col-3"><img src="" class="foodImages" alt=""></div>
-            <h1 class="foodNames"></h1>
-            <h2 class="prices"></h2>
+        <div class="mx-auto my-5 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-lg" onclick="orderTaken()">Large button</button>
         </div>
     </div>
     <footer>
@@ -90,5 +216,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>

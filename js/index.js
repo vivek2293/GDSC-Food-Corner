@@ -46,12 +46,8 @@ const orderPrice=()=>{
 
 
 
-
-
-
-
 //{
-//     "burger":"320",
-//     "biryani":"0",
-//     "pizza":"120"
+//     "burger":320,
+//     "biryani":0,
+//     "pizza":120
 //}
