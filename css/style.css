@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-item{
+    margin: auto 1.5vh;
+    font-size: x-large;
+    font-style: italic;
+}
+
+.row-form{
+    margin: 2vh;
+    padding: 0px;
+}
+
+.row-head{
+    margin: auto;
+    padding: 2vh;
+}
+
+.fa-star{
+    color:brown;
+}
+
+header {
+    padding-top: 7vh;
+    background-color: beige;
+}
+
+.container_custom{
+    padding-top: 10vh;
+    background-color: rgb(181, 127, 232);
+    min-height: 100vh;
+}
+
+.row-card{
+    justify-content: space-between;
+}
+
+.row-card-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body{
+    background-color: rosybrown;
+    font-size: 1.2em;
+    min-height: 20vh;
+}
+
+footer h6{
+    padding: 1.5vh 0vh 0.5vh 0vh;
+}
+
+.footer-row{
+    margin: 2vh 0vh 4vh 0vh;
+    text-align: center;
+    padding: 0px;
+}
+
+.footer-row a{
+    padding: 0px;
+}
