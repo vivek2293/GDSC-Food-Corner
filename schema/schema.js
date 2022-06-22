@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
-
+    date: Object,
     biryani : Number,
     butterChicken: Number,
     shahiPaneer: Number,
