@@ -50,6 +50,16 @@ header {
     justify-content: center;
 }
 
+.card{
+    border: none;
+    margin: auto;
+    margin-bottom: 3vh;
+}
+
+.card-img{
+    object-fit: cover;
+}
+
 .modal-body{
     background-color: rosybrown;
     font-size: 1.2em;
