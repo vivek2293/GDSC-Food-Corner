@@ -11,7 +11,8 @@ const PostSchema = mongoose.Schema({
     rice: Number,
     choleBhature: Number,
     pizza: Number,
-    burger: Number
+    burger: Number,
+    isComplete:Number
 });
 
 module.exports = mongoose.model('Order',PostSchema);
