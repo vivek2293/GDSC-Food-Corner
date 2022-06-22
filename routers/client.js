@@ -2,7 +2,8 @@ const express = require('express')
 const feed = express()
 const mongoose = require('mongoose')
 const Order=require('../schema/schema.js')
-mongoose.connect('mongodb+srv://shreyshah:Googleit%40123@cluster0.fesqe.mongodb.net/?retryWrites=true&w=majority',() =>{
+require('dotenv').config();
+mongoose.connect(process.env.DB_CONNECTION,() =>{
     console.log('connected')
 });
 
@@ -10,7 +11,7 @@ feed.get('/', (req,res)=>{
     res.send("This is just a landing page.")
 });
 
-feed.post('/order', (req,res)=>{
+feed.post('/order', async (req,res)=>{
     const currentOrder=new Order({
         date:new Date(),
         biryani :(req.body).biryani ,
@@ -24,9 +25,12 @@ feed.post('/order', (req,res)=>{
         pizza: (req.body).pizza,
         burger: (req.body).burger
     });
-    currentOrder.save().then(result=>{
-        console.log(result);
-    });
-})
+    try{
+        const savedcurrentOrder = await currentOrder.save();
+        res.json(savedcurrentOrder);
+    }catch(err){
+        res.json({message: err});
+    }
+});
 
 module.exports = feed;
