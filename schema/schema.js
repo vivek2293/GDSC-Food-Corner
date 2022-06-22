@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
 
-    date : Object,
     biryani : Number,
     butterChicken: Number,
     shahiPaneer: Number,
@@ -14,3 +13,5 @@ const PostSchema = mongoose.Schema({
     pizza: Number,
     burger: Number
 });
+
+module.exports = mongoose.model('Order',PostSchema);
