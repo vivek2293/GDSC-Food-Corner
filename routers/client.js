@@ -23,7 +23,8 @@ feed.post('/order', async (req,res)=>{
         rice: (req.body).rice,
         choleBhature: (req.body).choleBhature,
         pizza: (req.body).pizza,
-        burger: (req.body).burger
+        burger: (req.body).burger,
+        isComplete: 0
     });
     try{
         const savedcurrentOrder = await currentOrder.save();
