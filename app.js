@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors())
 app.use(express.json())
-app.use(require('./routers/index'))
+app.use(require('./routers/app.js'))
 
 mongoose.connect('mongodb+srv://shreyshah:Googleit%40123@cluster0.fesqe.mongodb.net/?retryWrites=true&w=majority',() =>{
     console.log('connected')
