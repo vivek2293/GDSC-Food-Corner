@@ -3,6 +3,11 @@
     padding: 0px;
 }
 
+header {
+    padding: 2vh 0vh;
+    background-color: rgb(100, 111, 212);
+}
+
 body{
     padding-top: 70px;
     background-color: rgb(155, 163, 235);
@@ -22,15 +27,16 @@ body{
     }
 }
 
-.bg-custom{
-    background-color: rgb(36, 47, 155);
-    /* background-color: rgba(54, 49, 52, 0.98); */
-}
 
 .nav-item{
     margin: auto 1.5vh;
     font-size: x-large;
     font-style: italic;
+}
+
+.bg-custom{
+    background-color: rgb(36, 47, 155);
+    /* background-color: rgba(54, 49, 52, 0.98); */
 }
 
 .p-carousel{
@@ -48,29 +54,16 @@ body{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(78,78,78,0.68) 30%, rgba(28,28,28,0.68) 50%, rgba(78,78,78,0.68) 70%, rgba(255,255,255,0) 100%);
 }
-.row-form{
-    margin: 2vh;
-    padding: 0px;
-}
 
 .row-head{
     margin: auto;
     padding: 2vh 0;
 }
 
-.fa-star{
-    color:brown;
-}
 
-header {
-    padding: 2vh 0vh;
-    background-color: rgb(100, 111, 212);
-}
-
-footer{
-    background-color: rgb(36, 47, 155);
-    position: absolute;
-    color: rgb(236, 229, 229);
+.row-form{
+    margin: 2vh;
+    padding: 0px;
 }
 
 .btn :hover {
@@ -119,10 +112,20 @@ footer{
     }
 }
 
+.checkbox{
+    transform: scale(3.5);
+}
+
 .modal-body{
     background-color: rosybrown;
     font-size: 1.2em;
     min-height: 20vh;
+}
+
+footer{
+    background-color: rgb(36, 47, 155);
+    position: absolute;
+    color: rgb(236, 229, 229);
 }
 
 footer h6{
@@ -135,13 +138,10 @@ footer h6{
     padding: 0px;
 }
 
-.checkbox{
-    transform: scale(3.5);
-}
-
 .footer-row a{
     padding: 0px;
 }
+
 .footer-row .social{
     color: rgb(219, 223, 253);
 }
@@ -149,6 +149,10 @@ footer h6{
 .social:hover{
     transition: all 200ms ease;
     transform: scale(1.1) rotate(-4deg);
+}
+
+.fa-star{
+    color:brown;
 }
 
 .fa-twitter:hover{
