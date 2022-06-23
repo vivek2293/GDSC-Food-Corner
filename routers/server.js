@@ -34,4 +34,10 @@ feed.post('/order', async (req,res)=>{
     }
 });
 
+feed.get('/all-orders',async (req,res)=>{
+    const orders= await Order.find();
+    // console.log(orders);
+    res.send(orders);
+})
+
 module.exports = feed;
