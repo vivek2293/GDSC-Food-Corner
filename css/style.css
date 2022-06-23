@@ -30,7 +30,7 @@ body{
 .nav-item{
     margin: auto 1.5vh;
     font-size: x-large;
-    font-style: italic;
+    font-weight: bold;
 }
 
 .p-carousel{
@@ -59,7 +59,7 @@ body{
 }
 
 .fa-star{
-    color:brown;
+    color: rgb(36, 47, 155);
 }
 
 header {
@@ -83,8 +83,9 @@ footer{
 }
 
 .container_custom{
+    color: wheat;
     padding-top: 5vh;
-    background-color: rgba(169, 154, 162, 0.8); 
+    background-color: rgb(100, 111, 212); 
 }
 
 .row-card{
