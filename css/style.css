@@ -7,6 +7,20 @@ body{
     padding-top: 70px;
 }
 
+@media (min-width: 575px){
+    nav{
+        max-height: 85px;
+    }
+    .nav-item{
+        max-height: 80px;
+    }
+    @media (max-width: 700px){
+        nav div ul li .fa-lg{
+            font-size: 0.875em;
+        }
+    }
+}
+
 .nav-item{
     margin: auto 1.5vh;
     font-size: x-large;
@@ -20,6 +34,7 @@ body{
 
 .row-head{
     margin: auto;
+    padding: 2vh 0;
 }
 
 .fa-star{
@@ -33,7 +48,7 @@ header {
 
 .btn :hover {
     transform: scale(1.01);
-    transition: transform 300ms ease;
+    transition: transform 100ms ease;
 }
 
 .container{
@@ -59,7 +74,7 @@ header {
     border: none;
     margin: auto;
     margin-bottom: 3vh;
-    max-width: 80%;
+    max-width: 90%;
     transition: transform 400ms ease;
 }
 
@@ -99,6 +114,27 @@ footer h6{
 
 .footer-row a{
     padding: 0px;
+}
+
+.social:hover{
+    transition: all 200ms ease;
+    transform: scale(1.1) rotate(-4deg);
+}
+
+.fa-twitter:hover{
+    color:#00acee;
+}
+
+.fa-youtube-play:hover{
+    color:#FF0000;
+}
+
+.fa-facebook:hover{
+    color:#3b5998;
+}
+
+.fa-google-plus-official:hover{
+    color:#db4a39;
 }
 
 /* background-color: rgba(169, 154, 162, 0.8);  */
