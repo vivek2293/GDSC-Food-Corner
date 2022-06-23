@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -60,9 +63,6 @@ body{
     padding: 2vh 0;
 }
 
-.fa-star{
-    color: rgb(36, 47, 155);
-}
 
 header {
     padding: 2vh 0vh;
@@ -121,6 +121,15 @@ header {
     }
 }
 
+.foodname{
+    color: rgb(236, 229, 199);
+    font-family: 'Andada Pro', serif;
+}
+.bg-custom-badge{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(53, 66, 89);
+    color: rgb(242, 235, 233);
+}
 .checkbox{
     transform: scale(3.5);
 }
@@ -161,7 +170,7 @@ footer h6{
 }
 
 .fa-star{
-    color:brown;
+    color: rgb(36, 47, 155);
 }
 
 .fa-twitter:hover{
