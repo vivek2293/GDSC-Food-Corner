@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <style>
+        .order-div{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
 </head>
 <body>
-    <%if(orders.length>0){%>
-        <%orders.forEach(order=>{%>
-            <h1>burger:</h1>
-            <p><%=order.burger%></p>
-        <%})%>
-    <%}%>
+    <section class="all-orders">
+        <%if(orders.length>0){%>
+            <%orders.forEach(order=>{%>
+                <%if(order.isComplete==0){%>
+                    <div class="order-div">
+                        <p>Order ID:</p>
+                        <p><%=order.id%></p>
+                        <p>Cost: </p>
+                        <p><%=(order.cost)*1.05%><br></p>
+                    </div>
+                    <%order.isComplete=1%>
+                <%}%>
+            <%})%>
+        <%}%> 
+    </section>
 </body>
 </html>

@@ -12,7 +12,8 @@ const PostSchema = mongoose.Schema({
     choleBhature: Number,
     pizza: Number,
     burger: Number,
-    isComplete:Number
+    isComplete:Number,
+    cost:Number
 });
 
 module.exports = mongoose.model('Order',PostSchema);

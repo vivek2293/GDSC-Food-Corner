@@ -13,8 +13,7 @@ admin.set('views','admin/views');
 admin.get('/admin',async (req,res)=>{
     const orders= await Order.find();
     res.render('index',{orders});
-    console.log(orders);
-    // res.send(orders);
+    // console.log(orders);
 });
 
 
