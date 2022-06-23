@@ -21,24 +21,29 @@ body{
         }
     }
 }
+
 .bg-custom{
     background-color: rgb(36, 47, 155);
     /* background-color: rgba(54, 49, 52, 0.98); */
 }
+
 .nav-item{
     margin: auto 1.5vh;
     font-size: x-large;
     font-style: italic;
 }
+
 .p-carousel{
     padding-top: 0.03rem;
     object-fit: cover;
     /* height: 100vh; */
 }
+
 .i-carousel{
     object-fit: cover;
     height: 75vh;
 }
+
 .carousel-caption{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(78,78,78,0.68) 30%, rgba(28,28,28,0.68) 50%, rgba(78,78,78,0.68) 70%, rgba(255,255,255,0) 100%);
@@ -61,11 +66,13 @@ header {
     padding: 2vh 0vh;
     background-color: rgb(100, 111, 212);
 }
+
 footer{
     background-color: rgb(36, 47, 155);
     position: absolute;
     color: rgb(236, 229, 229);
 }
+
 .btn :hover {
     transform: scale(1.01);
     transition: transform 100ms ease;
