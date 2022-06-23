@@ -12,7 +12,7 @@ header {
 }
 
 body{
-    padding-top: 70px;
+    padding-top: 55px;
     background-color: rgb(155, 163, 235);
 }
 
@@ -35,6 +35,10 @@ body{
     margin: auto 1.5vh;
     font-size: x-large;
     font-weight: bold;
+}
+
+#Navbar{
+    padding-right: 5vh;
 }
 
 .bg-custom{
