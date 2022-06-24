@@ -35,7 +35,7 @@
         }
         
         footer{
-            position: fixed;
+            position: absolute;
             background-color: rgb(48, 39, 5);
             width: 100%;
             bottom: 0px;
@@ -77,19 +77,16 @@
     <section class="all-orders">
         <%if(orders.length>0){%>
             <%orders.forEach(order=>{%>
-                <%if(order.isComplete==0){%>
-                    <div class="order-div">
-                        <div>Order ID:</div>
-                        <div><%=order.id%></div>
-                        <div>Cost: </div>
-                        <div><%=(order.cost)*1.05%></div>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="finish" id="<%=order.id%>" onclick="orderComp(this)">Order Completed</button>
-                        </div>
+                <div class="order-div">
+                    <div>Order ID:</div>
+                    <div><%=order.id%></div>
+                    <div>Cost: </div>
+                    <div><%=(order.cost)*1.05%></div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="finish" id="<%=order.id%>" onclick="orderComp(this)">Order Completed</button>
                     </div>
-                    <br>
-                    <%order.isComplete=1%>
-                <%}%>
+                </div>
+                <br>
             <%})%>
         <%}%> 
     </section>
