@@ -3,8 +3,9 @@ const PDF=require('pdfkit')
 function generateInvoice(objData,dataCallback,endCallback){
     console.log("here: "+objData);
     let bill="";
-    for(var propt in objData){
-        if(objData[propt]!=0) bill+=`\n${propt} : ${objData[propt]}`;
+    for(let propt in objData){
+        if((objData[propt])!='0') bill+=`\n${propt} : ${objData[propt]}`;
+        if(propt=='cost') break;
     }
     const doc = new PDF();
     doc.on('data',dataCallback);
