@@ -8,7 +8,9 @@ function generateInvoice(objData,dataCallback,endCallback){
     for(let propt in objData){
         if(propt=='date') write=false;
         if(write) continue;
-        if((objData[propt])!='0') bill+=`\n${propt} : ${objData[propt]}`;
+        let property=propt.charAt(0).toUpperCase() + propt.slice(1);
+        console.log(property[0]);
+        if((objData[propt])!='0') bill+=`\n${property.replace(/([a-z])([A-Z])/g, '$1 $2')} : ${objData[propt]}`;
         if(propt=='cost') break;
     }
     const doc = new PDF();
