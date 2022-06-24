@@ -260,15 +260,19 @@ header {
     color: rgb(242, 235, 233);
 }
 .cart-value1{
-
-background-color: rgb(219, 223, 253);
-color: rgb(36, 47, 155);
-font-weight: bolder;
-font-size: xx-large;
-align-items: center;
-border-radius: 1rem;
+    background-color: rgb(219, 223, 253);
+    color: rgba(0,0,0,0.8);
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 0.8rem;
 }
-.cart-value{
+
+.cart-value1 .fa{
+    color: black;
+}
+
+#cart-value{
     font-size: xx-large;
     font-family: 'Rubik', sans-serif;
     color: black;
