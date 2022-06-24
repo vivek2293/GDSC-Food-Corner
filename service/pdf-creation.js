@@ -4,7 +4,7 @@ function generateInvoice(objData,dataCallback,endCallback){
     console.log("here: "+objData);
     let bill="";
     for(var propt in objData){
-        if(objData[propt]!=0) bill+=`\n${propt} : ${objData[propt]}`;
+        if(objData[propt]!= 0) bill+=`\n${propt} : ${objData[propt]}`;
     }
     const doc = new PDF();
     doc.on('data',dataCallback);
