@@ -44,6 +44,7 @@ const orderPrice=()=>{
     for(let i=0;i<10;i++){
         if(document.getElementById(`cbid${i}`).checked==true) sum+=prices[`${i}`];
     }
+    document.getElementById('cart-value').innerText=sum;
     console.log(sum);
 }
 
