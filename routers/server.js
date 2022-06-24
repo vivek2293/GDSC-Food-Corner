@@ -53,4 +53,12 @@ feed.get('/invoice',(req,res)=>{
     );
 });
 
+feed.post('/completed', (req,res) =>{
+    async function run(){
+        await Order.deleteOne({ _id: req.body.id});
+    }
+
+    run();
+})
+
 module.exports = feed;

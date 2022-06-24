@@ -48,10 +48,14 @@
             <%orders.forEach(order=>{%>
                 <%if(order.isComplete==0){%>
                     <div class="order-div">
-                        <p>Order ID:</p>
-                        <p><%=order.id%></p>
-                        <p>Cost: </p>
-                        <p><%=(order.cost)*1.05%><br></p>
+                        <div>Order ID:</div>
+                        <div><%=order.id%></div>
+                        <div>Cost: </div>
+                        <div><%=(order.cost)*1.05%></div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" id="<%=order.id%>" onclick="orderComp(this)">Large button</button>
+                        </div>
+                        <br>
                     </div>
                     <%order.isComplete=1%>
                 <%}%>
@@ -61,5 +65,22 @@
     <footer>
         <h4>Copyright &copy; AbsoluteZero</h4>
     </footer>
+    <script>
+        const orderComp=(btn)=>{
+            console.log(btn.id)
+            const value = btn.id;
+            console.log(JSON.stringify({id:value}))
+            fetch('http://localhost:3000/completed',{
+                method : "POST",
+                headers: {
+                    'Content-Type' : 'application/json' 
+                },
+                body: JSON.stringify({id:value})
+            })
+            .then(res => {
+                return res.json();
+            })
+        }
+    </script>
 </body>
 </html>
