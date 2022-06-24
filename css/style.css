@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 *{
     margin: 0px;
@@ -204,6 +205,17 @@ header {
     transform: scale(1.04);
 }
 
+.card-title{
+    text-align: center;
+    padding-top: 0.05rem;
+    color: rgb(0, 238, 255);
+    font-weight: bolder;
+}
+
+.card-img-overlay{
+    padding-top: 0.1rem;
+}
+
 .card-img{
     object-fit: cover;
 }
@@ -248,9 +260,10 @@ header {
     background-color: rgb(53, 66, 89);
     color: rgb(242, 235, 233);
 }
-
-.checkbox{
-    transform: scale(3.1);
+.cart-value{
+    font-size: xx-large;
+    font-family: 'Rubik', sans-serif;
+    color: black;
 }
 
 .modal-body{
@@ -276,10 +289,12 @@ footer h6{
 }
 
 .footer-row a{
+    align-items: center;
     padding: 0px;
 }
 
 .footer-row .social{
+    align-items: center;
     color: rgb(219, 223, 253);
 }
 
