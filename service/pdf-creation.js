@@ -9,7 +9,6 @@ function generateInvoice(objData,dataCallback,endCallback){
         if(propt=='date') write=false;
         if(write) continue;
         let property=propt.charAt(0).toUpperCase() + propt.slice(1);
-        console.log(property[0]);
         if((objData[propt])!='0') bill+=`\n${property.replace(/([a-z])([A-Z])/g, '$1 $2')} : ${objData[propt]}`;
         if(propt=='cost') break;
     }

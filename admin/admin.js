@@ -16,5 +16,4 @@ admin.get('/admin',async (req,res)=>{
     // console.log(orders);
 });
 
-
 module.exports=admin;

@@ -43,7 +43,7 @@ feed.post('/completed',async (req,res) =>{
     feed.get('/invoice',async (req,res)=>{
         const stream= res.writeHead(200,{
             'Content-Type':'application/pdf',
-            'Content-Disposition':`attachment;filename=invoiceNewest.pdf`
+            'Content-Disposition':`attachment;filename=${objID.substring(0,10)}.pdf`
         })
         pdf.generateInvoice(
             objData,
