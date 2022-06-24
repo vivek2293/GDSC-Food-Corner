@@ -144,7 +144,7 @@ header {
     transform: scale(1.07);
     padding: 0.60 vh;
     margin: auto;
-    transition-delay: 200ms;
+    transition-delay: 0ms;
     transition: 300ms ease;
 }
 

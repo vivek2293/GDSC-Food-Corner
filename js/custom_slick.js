@@ -6,7 +6,7 @@ $('.multiple-items').slick({
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplayspeed: 550,
+    autoplayspeed: 120,
     rtl: true,
     dots: false,
     centerPadding: '40px',
