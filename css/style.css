@@ -222,8 +222,7 @@ header {
     transform: scale(1.07);
     padding: 0.60 vh;
     margin: auto;
-    transition-delay: 0ms;
-    transition: 300ms ease;
+    transition: 250ms ease;
 }
 
 .slick-h4{
