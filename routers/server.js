@@ -1,6 +1,7 @@
 const express = require('express')
 const feed = express()
 const mongoose = require('mongoose')
+const pdf=require('../service/pdf-creation.js')
 const Order=require('../schema/schema.js')
 require('dotenv').config();
 mongoose.connect(process.env.DB_CONNECTION,() =>{
@@ -35,10 +36,21 @@ feed.post('/order', async (req,res)=>{
     }
 });
 
-// feed.get('/all-orders',async (req,res)=>{
-//     const orders= await Order.find();
-//     // console.log(orders);
-//     res.send(orders);
-// })
+feed.get('/invoice',(req,res)=>{
+    const stream= res.writeHead(200,{
+        'Content-Type':'application/pdf',
+        'Content-Disposition':'attachment;filename=invoice.pdf'
+    })
+    const objData={
+        biryani:240,
+        naan:0,
+        burger:340
+    };
+    pdf.generateInvoice(
+        objData,
+        (chunk)=>stream.write(chunk),
+        ()=>stream.end()
+    );
+});
 
 module.exports = feed;
