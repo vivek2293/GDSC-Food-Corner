@@ -9,7 +9,8 @@ function generateInvoice(objData,dataCallback,endCallback){
     bill+=`${objData.id}`;
     for(let propt in objData){
         let property=propt.charAt(0).toUpperCase() + propt.slice(1);
-        if(propt=='date') {
+        property.replace(/([a-z])([A-Z])/g, '$1 $2');
+        if(propt=='date'){
             write=false;
             bill+=`\n${property.replace(/([a-z])([A-Z])/g, '$1 $2')} : ${objData[propt]}`;
             continue;
@@ -23,7 +24,7 @@ function generateInvoice(objData,dataCallback,endCallback){
             bill+=`\nFinal Price : ${1.05*objData[propt]}`;
             break;
         }
-        if((objData[propt])!='0') bill+=`\n${property.replace(/([a-z])([A-Z])/g, '$1 $2')} : ${objData[propt]}:  ${objData[propt]*prices[i]}`;
+        if((objData[propt])!='0') bill+=`\n${property} : ${objData[propt]}:  ${objData[propt]*prices[i]}`;
     }
     const doc = new PDF();
     doc.on('data',dataCallback);
