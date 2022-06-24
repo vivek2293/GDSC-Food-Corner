@@ -41,9 +41,23 @@ const orderTaken=()=>{
 
 function plus1(ele){
     const parent = ele.parentNode;
-    const num = parent.childNodes[1];
-    let value = Number(num.innerText);
-    // prices[(num.id)[1]]
+    const qty = parent.childNodes[3];
+    const cart=document.getElementById('cart-value');
+    let value= Number(cart.innerText);
+    console.log(prices[(qty.id)[1]]);
+    cart.innerText=`${value+prices[(qty.id)[1]]}`;
+    qty.innerText=`${Number(qty.innerText)+1}`;
+}
+function minus1(ele){
+    const parent = ele.parentNode;
+    const qty = parent.childNodes[3];
+    const cart=document.getElementById('cart-value');
+    let value= Number(cart.innerText);
+    console.log(prices[(qty.id)[1]]);
+    if(Number(qty.innerText)>0) {
+        cart.innerText=`${value-prices[(qty.id)[1]]}`;
+        qty.innerText=`${Number(qty.innerText)-1}`;
+    }
 }
 const orderPrice=()=>{
     let sum=0;
@@ -54,23 +68,23 @@ const orderPrice=()=>{
     console.log(sum);
 }
 
-const plus = document.querySelector(".plus"),
-minus = document.querySelector(".minus"),
-num = document.querySelector(".num");
-let a = 0;
-plus.addEventListener("click", ()=>{
-    a++;
-    a = (a < 10) ? "0" + a : a;
-    num.innerText = a;
-});
+// const plus = document.querySelector(".plus"),
+// minus = document.querySelector(".minus"),
+// num = document.querySelector(".num");
+// let a = 0;
+// plus.addEventListener("click", ()=>{
+//     a++;
+//     a = (a < 10) ? "0" + a : a;
+//     num.innerText = a;
+// });
 
-minus.addEventListener("click", ()=>{
-    if(a > 0){
-    a--;
-    a = (a < 10) ? "0" + a : a;
-    num.innerText = a;
-    }
-});
+// minus.addEventListener("click", ()=>{
+//     if(a > 0){
+//     a--;
+//     a = (a < 10) ? "0" + a : a;
+//     num.innerText = a;
+//     }
+// });
 
 
     
