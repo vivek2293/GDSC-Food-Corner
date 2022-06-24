@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background-color: rgb(135, 128, 94);
+            background-color: rgba(135, 128, 94,0.7);
             font-family: 'Inter', sans-serif;
             text-align: left;
         }
@@ -28,6 +28,7 @@
             border-radius: 0.5rem;
             font-size: large;
             align-items: center;
+            background-color: rgba(1,1,1,0.17)
         }
 
         .text-center{
@@ -35,11 +36,11 @@
         }
         
         footer{
-            position: fixed;
-            background-color: rgb(48, 39, 5);
+            position:fixed;
+            bottom:0rem;
+            background-color: rgb(83, 78, 57);
             width: 100%;
-            bottom: 0px;
-            color: rgb(252, 255, 231);
+            color: rgb(255, 255, 255);
         }
 
         footer h4{
@@ -77,19 +78,16 @@
     <section class="all-orders">
         <%if(orders.length>0){%>
             <%orders.forEach(order=>{%>
-                <%if(order.isComplete==0){%>
-                    <div class="order-div">
-                        <div>Order ID:</div>
-                        <div><%=order.id%></div>
-                        <div>Cost: </div>
-                        <div><%=(order.cost)*1.05%></div>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="finish" id="<%=order.id%>" onclick="orderComp(this)">Order Completed</button>
-                        </div>
+                <div class="order-div">
+                    <div>Order ID:</div>
+                    <div><%=order.id%></div>
+                    <div>Cost: </div>
+                    <div><%=(order.cost)*1.05%></div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="finish" id="<%=order.id%>" onclick="orderComp(this)">Order Completed</button>
                     </div>
-                    <br>
-                    <%order.isComplete=1%>
-                <%}%>
+                </div>
+                <br>
             <%})%>
         <%}%> 
     </section>
