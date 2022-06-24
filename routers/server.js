@@ -36,27 +36,27 @@ feed.post('/order', async (req,res)=>{
     }
 });
 
-feed.get('/invoice',(req,res)=>{
-    const stream= res.writeHead(200,{
-        'Content-Type':'application/pdf',
-        'Content-Disposition':'attachment;filename=invoice.pdf'
-    })
-    const objData={
-        biryani:240,
-        naan:0,
-        burger:340
-    };
-    pdf.generateInvoice(
-        objData,
-        (chunk)=>stream.write(chunk),
-        ()=>stream.end()
-    );
-});
+feed.post('/completed',async (req,res) =>{
+    const objID=req.body.id;
+    // console.log(await Order.findOne({ _id: objID}));
+    let objData = await Order.findOne({ _id: objID});
+    // console.log(objData);
+    feed.get('/invoice',async (req,res)=>{
+        const stream= res.writeHead(200,{
+            'Content-Type':'application/pdf',
+            'Content-Disposition':`attachment;filename=invoiceNewest.pdf`
+        })
+        pdf.generateInvoice(
+            objData,
+            (chunk)=>stream.write(chunk),
+            ()=>stream.end()
+        );
+    });
 
-feed.post('/completed', (req,res) =>{
     async function run(){
         await Order.deleteOne({ _id: req.body.id});
     }
+    
 
     run();
 })
