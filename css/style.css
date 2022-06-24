@@ -119,11 +119,11 @@ header {
     margin: auto;
     margin-bottom: 3vh;
     max-width: 90%;
-    transition: transform 400ms ease;
+    transition: transform 350ms ease;
 }
 
 .card:hover{
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .card-img{
@@ -134,6 +134,27 @@ header {
     .card-text{
         display: none;
     }
+}
+
+.slick-center .img-thumbnail{
+    transform: scale(1.07);
+    padding: 0.60 vh;
+    margin: auto;
+    transition-delay: 200ms;
+    transition: 300ms ease;
+}
+
+.slick-h4{
+    z-index: 2;
+}
+
+.slick-img{
+    margin: 2vh auto;
+    padding: 0.50vh;
+}
+
+.slick-div{
+    margin: 5vh;
 }
 
 .foodname{
