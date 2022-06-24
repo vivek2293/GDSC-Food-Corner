@@ -29,8 +29,12 @@ function generateInvoice(objData,dataCallback,endCallback){
     doc.on('data',dataCallback);
     doc.on('end',endCallback);
     doc
+    .image('img/nav-logo.png',{
+        fit:[400,80],
+        align:'center'
+    })
     .fontSize(16)
-    .text(bill,20,20);
+    .text(bill,20,200);
     doc.end();
 }
 
