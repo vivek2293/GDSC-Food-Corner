@@ -25,7 +25,6 @@ feed.post('/order', async (req,res)=>{
         choleBhature: (req.body).choleBhature,
         pizza: (req.body).pizza,
         burger: (req.body).burger,
-        isComplete: (req.body).isComplete,
         cost:(req.body).cost
     });
     try{

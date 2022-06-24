@@ -1,5 +1,5 @@
 class Order{
-    constructor(biryani, butterChicken, shahiPaneer, naan, roti, dal, rice, choleBhature, pizza, burger,isComplete,cost)
+    constructor(biryani, butterChicken, shahiPaneer, naan, roti, dal, rice, choleBhature, pizza, burger,cost)
     {
         this.biryani = biryani;
         this.butterChicken = butterChicken;
@@ -11,7 +11,6 @@ class Order{
         this.choleBhature = choleBhature;
         this.pizza = pizza;
         this.burger = burger;
-        this.isComplete=isComplete;
         this.cost=cost;
     }
 }
@@ -24,7 +23,7 @@ const orderTaken=()=>{
         if(document.getElementById(`cbid${i}`).checked==true) f[i]=prices[`${i}`];
         sum+=f[i];
     }
-    const currentOrder= new Order(f[0],f[1],f[2],f[3],f[4],f[5],f[6],f[7],f[8],f[9],0,sum);
+    const currentOrder= new Order(f[0],f[1],f[2],f[3],f[4],f[5],f[6],f[7],f[8],f[9],sum);
     console.log(currentOrder);
     console.log(JSON.stringify(currentOrder));
     fetch('http://localhost:3000/order',{
