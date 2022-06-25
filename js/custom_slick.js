@@ -1,3 +1,5 @@
+// Javasript for slick-slider of index.html
+
 $('.multiple-items').slick({
   infinite: true,
   centerMode: true,
