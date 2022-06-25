@@ -24,13 +24,13 @@ function generateInvoice(objData, dataCallback, endCallback) {
         if (propt == 'cost') {
             bill += "\n\n";
             for (let x = 0; x < 32; x++) bill += ' ';
-            bill += `Total Price : ${objData[propt]}\n`;
+            bill += `Total Price : Rs.${objData[propt]}\n`;
             for (let x = 0; x < 32; x++) bill += ' ';
-            bill += `CGST        : ${0.025 * objData[propt]}\n`;
+            bill += `CGST        : Rs.${0.025 * objData[propt]}\n`;
             for (let x = 0; x < 32; x++) bill += ' ';
-            bill += `SGST        : ${0.025 * objData[propt]}\n`;
+            bill += `SGST        : Rs.${0.025 * objData[propt]}\n`;
             for (let x = 0; x < 32; x++) bill += ' ';
-            bill += `Final Price : ${1.05 * objData[propt]}`;
+            bill += `Final Price : Rs.${1.05 * objData[propt]}`;
             break;// This is important because the object contains a lot of extra unnecessary info from database
         }
         if ((objData[propt]) != '0') {
