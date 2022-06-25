@@ -40,7 +40,7 @@ feed.post('/completed',async (req,res) =>{
     // console.log(await Order.findOne({ _id: objID}));
     let objData = await Order.findOne({ _id: objID});
     // console.log(objData);
-    feed.get('/invoice',async (req,res)=>{
+    feed.get(`/invoice+${objID}`,async (req,res)=>{
         const stream= res.writeHead(200,{
             'Content-Type':'application/pdf',
             'Content-Disposition':`attachment;filename=${objID}.pdf`
@@ -56,7 +56,6 @@ feed.post('/completed',async (req,res) =>{
         await Order.deleteOne({ _id: req.body.id});
     }
     
-
     run();
 })
 

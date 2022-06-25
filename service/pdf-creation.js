@@ -1,16 +1,14 @@
-const PDF=require('pdfkit')
-const prices=[200,240,180,35,20,150,120,110,220,190];
-
-let i=-1;
 function generateInvoice(objData,dataCallback,endCallback){
+    const PDF=require('pdfkit')
+    let i=-1;
+    const prices=[200,240,180,35,20,150,120,110,220,190];
     console.log("here: "+objData);
     let bill="Order ID: ";
     let write=true;
     bill+=`${objData.id}`;
     for(let propt in objData){
         let property=propt.charAt(0).toUpperCase() + propt.slice(1);
-        property.replace(/([a-z])([A-Z])/g, '$1 $2');
-        if(propt=='date'){
+        if(propt=='date') {
             write=false;
             bill+=`\n${property.replace(/([a-z])([A-Z])/g, '$1 $2')} : ${objData[propt]}`;
             continue;
@@ -24,7 +22,7 @@ function generateInvoice(objData,dataCallback,endCallback){
             bill+=`\nFinal Price : ${1.05*objData[propt]}`;
             break;
         }
-        if((objData[propt])!='0') bill+=`\n${property} : ${objData[propt]}:  ${objData[propt]*prices[i]}`;
+        if((objData[propt])!='0') bill+=`\n${property.replace(/([a-z])([A-Z])/g, '$1 $2')} : ${objData[propt]}:  ${objData[propt]*prices[i]}`;
     }
     const doc = new PDF();
     doc.on('data',dataCallback);

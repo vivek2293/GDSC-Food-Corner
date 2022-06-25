@@ -84,7 +84,7 @@
                     <div>Cost: </div>
                     <div><%=(order.cost)*1.05%></div>
                     <div class="d-flex justify-content-center">
-                        <a href="http://localhost:3000/invoice"><button type="button" class="finish" id="<%=order.id%>" onclick="orderComp(this)">Order Completed</button></a>
+                        <button type="button" class="finish" id="<%=order.id%>" onclick="orderComp(this)">Order Completed</button>
                     </div>
                 </div>
                 <br>
@@ -98,6 +98,9 @@
         const orderComp=(btn)=>{
             console.log(btn.id)
             const value = btn.id;
+            let url = "http://localhost:3000/invoice" + value;
+            console.log(url)
+
             console.log(JSON.stringify({id:value}))
             fetch('http://localhost:3000/completed',{
                 method : "POST",
@@ -109,8 +112,12 @@
             .then(res => {
                 return res.json();
             })
-            
-            setTimeout("location.reload(true);", 800);
+
+            function GetInvoice(){
+                window.location.replace(url);
+                setTimeout("location.reload(true);", 200);
+            }
+            setTimeout(GetInvoice, 200);
         }
     </script>
 </body>
