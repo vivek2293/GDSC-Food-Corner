@@ -1,19 +1,46 @@
+/* Imported Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&family=Ubuntu:wght@500&family=Lobster&family=Lato&family=Rubik:wght@500&display=swap');
 
-* {
+*{
     margin: 0px;
     padding: 0px;
 }
+
+
+/* Header of index.html */
 
 header {
     padding: 2vh 0vh;
     background-color: rgb(100, 111, 212);
 }
 
+.btn :hover {
+    transform: scale(1.01);
+    transition: transform 100ms ease;
+}
+
+
+/* Styling of body */
+
 body {
     padding-top: 60px;
     background-color: rgb(155, 163, 235);
 }
+
+.container {
+    margin-bottom: 170px;
+}
+
+.container_custom {
+    color: wheat;
+    min-height: 100vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    background-color: rgb(100, 111, 212);
+}
+
+
+/* Responsive Navigation for medium devices */
 
 @media (min-width: 575px) {
     nav {
@@ -32,17 +59,28 @@ body {
 }
 
 
+/* Navigation's CSS */
+
+#Navbar {
+    padding-right: 5vh;
+}
+
 .nav-item {
     margin: auto 1.5vh;
     font-size: x-large;
     font-weight: bold;
 }
 
-#Navbar {
-    padding-right: 5vh;
+.bg-custom {
+    background-color: rgba(36, 47, 155, 0.97);
 }
 
+
+/* Styling Header of index.html */
+
 .row-head {
+    margin: auto;
+    padding: 2vh 0;
     color: rgb(223, 246, 255);
     font-family: 'Lobster', cursive;
 }
@@ -50,6 +88,121 @@ body {
 .lato {
     font-family: 'Lato', sans-serif;
 }
+
+
+/* CSS for carousel on index.html */
+
+.p-carousel {
+    padding-top: 0.03rem;
+    object-fit: cover;
+    /* height: 100vh; */
+}
+
+.i-carousel {
+    object-fit: cover;
+    height: 75vh;
+}
+
+.carousel-caption {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(78, 78, 78, 0.68) 30%, rgba(28, 28, 28, 0.68) 50%, rgba(78, 78, 78, 0.68) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.p-5 {
+    font-size: x-large;
+}
+
+
+/* Styling Cards */
+.row-card {
+    justify-content: space-between;
+}
+
+.row-card-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: none;
+    margin: auto;
+    margin-bottom: 3vh;
+    max-width: 90%;
+    transition: transform 350ms ease;
+}
+
+.card-body{
+    color: rgb(36, 47, 155);
+}
+
+.bg-card-custom {
+    background-color: rgb(141, 149, 220);
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card-title {
+    padding-top: 0.05rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.card-img-overlay {
+    padding-top: 0.1rem;
+}
+
+.card-img {
+    object-fit: cover;
+}
+
+@media (max-width: 1160px) {
+    .card-text {
+        display: none;
+    }
+}
+
+
+/* Slick-Slider's CSS */
+
+.slick-center {
+    transform: scale(1.17);
+    padding: 0.60 vh;
+    margin: auto;
+    transition: 250ms ease;
+}
+
+.slick-h4 {
+    z-index: 2;
+}
+
+.slick-img {
+    margin: 2vh auto;
+    padding: 0.50vh;
+}
+
+.slick-div {
+    margin: 5vh;
+}
+
+
+/* Menu Styles */
+
+.foodname {
+    color: rgb(236, 229, 199);
+    font-family: 'Andada Pro', serif;
+}
+
+.bg-custom-badge {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(53, 66, 89);
+    color: rgb(242, 235, 233);
+}
+
+
+/* Menu Place Order Button */
 
 .button-64 {
     align-items: center;
@@ -100,10 +253,8 @@ body {
     }
 }
 
-.bg-custom {
-    background-color: rgba(36, 47, 155, 0.97);
-    /* background-color: rgba(54, 49, 52, 0.98); */
-}
+
+/* Plus Minus Selector CSS of Menu.html */
 
 .wrapper {
     height: 4vh;
@@ -133,133 +284,13 @@ body {
     pointer-events: none;
 }
 
-.p-carousel {
-    padding-top: 0.03rem;
-    object-fit: cover;
-    /* height: 100vh; */
-}
 
-.i-carousel {
-    object-fit: cover;
-    height: 75vh;
-}
+/* Customising Cart */
 
-.carousel-caption {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(78, 78, 78, 0.68) 30%, rgba(28, 28, 28, 0.68) 50%, rgba(78, 78, 78, 0.68) 70%, rgba(255, 255, 255, 0) 100%);
-}
-
-.row-head {
-    margin: auto;
-    padding: 2vh 0;
-}
-
-.p-5 {
-    font-size: x-large;
-}
-
-header {
-    padding: 2vh 0vh;
-    background-color: rgb(100, 111, 212);
-}
-
-.row-form {
-    margin: 2vh;
-    padding: 0px;
-}
-
-.btn :hover {
-    transform: scale(1.01);
-    transition: transform 100ms ease;
-}
-
-.container {
-    margin-bottom: 170px;
-}
-
-.container_custom {
-    color: wheat;
-    min-height: 100vh;
-    padding-top: 5vh;
-    padding-bottom: 10vh;
-    background-color: rgb(100, 111, 212);
-}
-
-.row-card {
-    justify-content: space-between;
-}
-
-.row-card-in {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card {
-    border: none;
-    margin: auto;
-    margin-bottom: 3vh;
-    max-width: 90%;
-    transition: transform 350ms ease;
-}
-
-.card:hover {
-    transform: scale(1.04);
-}
-
-.card-title {
-    padding-top: 0.05rem;
-    color: white;
-    font-weight: bolder;
-}
-
-.card-img-overlay {
-    padding-top: 0.1rem;
-}
-
-.card-img {
-    object-fit: cover;
-}
-
-@media (max-width: 1160px) {
-    .card-text {
-        display: none;
-    }
-}
-
-.bg-card-custom {
-    background-color: rgb(141, 149, 220);
-}
-
-.slick-center {
-    transform: scale(1.17);
-    padding: 0.60 vh;
-    margin: auto;
-    transition: 250ms ease;
-}
-
-.slick-h4 {
-    z-index: 2;
-}
-
-.slick-img {
-    margin: 2vh auto;
-    padding: 0.50vh;
-}
-
-.slick-div {
-    margin: 5vh;
-}
-
-.foodname {
-    color: rgb(236, 229, 199);
-    font-family: 'Andada Pro', serif;
-}
-
-.bg-custom-badge {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: rgb(53, 66, 89);
-    color: rgb(242, 235, 233);
+#cart-value {
+    font-size: xx-large;
+    font-family: 'Rubik', sans-serif;
+    color: black;
 }
 
 .cart-value1 {
@@ -275,10 +306,12 @@ header {
     color: black;
 }
 
-#cart-value {
-    font-size: xx-large;
-    font-family: 'Rubik', sans-serif;
-    color: black;
+
+/* Form-row Styles */
+
+.row-form {
+    margin: 2vh;
+    padding: 0px;
 }
 
 .modal-body {
@@ -286,6 +319,28 @@ header {
     font-size: 1.2em;
     min-height: 20vh;
 }
+
+/* FAQ-page styling */
+
+.question{
+    font-weight: bolder;
+    font-size: large;
+    padding-bottom: 0.5rem;
+}
+
+.condet{
+    text-align: center;
+}
+
+.maicon{
+    font-weight: bold;
+}
+
+.bg-info-custom{
+    background-color: rgb(219, 223, 253);
+}
+
+/* Footer Styling */
 
 footer {
     background-color: rgb(36, 47, 155);
@@ -297,12 +352,7 @@ footer {
 footer h6 {
     padding: 1vh 0vh 0.5vh 0vh;
 }
- .condet{
-    text-align: center;
- }
-.maicon{
-    font-weight: bold;
-}
+
 .footer-row {
     margin: 2vh 0vh 4vh 0vh;
     text-align: center;
@@ -319,23 +369,13 @@ footer h6 {
     color: rgb(219, 223, 253);
 }
 
-.bg-info-custom{
-    background-color: rgb(219, 223, 253);
-}
-
-.card-body{
-    color: rgb(36, 47, 155);
-}
-
-.question{
-    font-weight: bolder;
-    font-size: large;
-    padding-bottom: 0.5rem;
-}
 .social:hover {
     transition: all 200ms ease;
     transform: scale(1.1) rotate(-4deg);
 }
+
+
+/* Font-awesome Custom Styling */
 
 .fa-star {
     color: rgb(36, 47, 155);
@@ -356,5 +396,3 @@ footer h6 {
 .fa-google-plus-official:hover {
     color: #db4a39;
 }
-
-/* background-color: rgba(169, 154, 162, 0.8);  */
