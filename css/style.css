@@ -179,6 +179,7 @@ header {
 
 .container_custom {
     color: wheat;
+    min-height: 100vh;
     padding-top: 5vh;
     padding-bottom: 10vh;
     background-color: rgb(100, 111, 212);
