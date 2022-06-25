@@ -297,7 +297,12 @@ footer {
 footer h6 {
     padding: 1vh 0vh 0.5vh 0vh;
 }
-
+ .condet{
+    text-align: center;
+ }
+.maicon{
+    font-weight: bold;
+}
 .footer-row {
     margin: 2vh 0vh 4vh 0vh;
     text-align: center;
@@ -314,6 +319,19 @@ footer h6 {
     color: rgb(219, 223, 253);
 }
 
+.bg-info-custom{
+    background-color: rgb(219, 223, 253);
+}
+
+.card-body{
+    color: rgb(36, 47, 155);
+}
+
+.question{
+    font-weight: bolder;
+    font-size: large;
+    padding-bottom: 0.5rem;
+}
 .social:hover {
     transition: all 200ms ease;
     transform: scale(1.1) rotate(-4deg);
