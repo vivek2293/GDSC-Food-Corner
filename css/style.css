@@ -231,8 +231,8 @@ header {
     background-color: rgb(141, 149, 220);
 }
 
-.slick-center .img-thumbnail {
-    transform: scale(1.07);
+.slick-center {
+    transform: scale(1.17);
     padding: 0.60 vh;
     margin: auto;
     transition: 250ms ease;
