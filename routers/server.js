@@ -37,9 +37,7 @@ feed.post('/order', async (req,res)=>{
 
 feed.post('/completed',async (req,res) =>{
     const objID=req.body.id;
-    // console.log(await Order.findOne({ _id: objID}));
     let objData = await Order.findOne({ _id: objID});
-    // console.log(objData);
     feed.get(`/invoice+${objID}`,async (req,res)=>{
         const stream= res.writeHead(200,{
             'Content-Type':'application/pdf',
